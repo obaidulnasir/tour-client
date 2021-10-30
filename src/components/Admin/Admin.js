@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import AddTraveller from "../AddTraveller/AddTraveller";
 import AddEvents from "./AddEvents/AddEvents";
-import AddTraveller from "./AddTraveller/AddTraveller";
 import ManageEvents from "./ManageEvents/ManageEvents";
 
 const Admin = () => {

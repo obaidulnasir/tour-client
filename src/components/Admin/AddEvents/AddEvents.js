@@ -15,7 +15,7 @@ const AddEvents = () => {
           body: JSON.stringify(data)
       })
       .then(res => res.json())
-      .then(data => console.log(data))
+      .then(data => console.log(data));
   };
   return (
     <div>
@@ -23,14 +23,16 @@ const AddEvents = () => {
         <h3 className="text-center">Add an Events</h3>
         <div className="w-50 mx-auto text-center">
           <form onSubmit={handleSubmit(onSubmit)}>
-            {/* register your input into the hook by invoking the "register" function */}
-            <input defaultValue="" placeholder="Events Name" {...register("name")} />
-
-            {/* include validation with required or other standard HTML validation rules */}
+          
+            <input defaultValue="" placeholder="Events Name" {...register("name", {required:true})} />
+              <br />
             <input {...register("email", { required: true })}  placeholder="Email"/>
-            {/* errors will return when field validation fails  */}
             {errors.exampleRequired && <span>This field is required</span>}
-
+            <br />
+            <input defaultValue="" {...register("img_link")} placeholder="Image Link"/>
+              <br />
+              <textarea  {...register("description")} placeholder="Description " cols="15" rows="1"></textarea>
+     <br />
             <input type="submit" value="Add Events"/>
           </form>
         </div>
