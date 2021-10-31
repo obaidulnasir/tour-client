@@ -1,13 +1,28 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import "./Home.css"
 
 const Home = () => {
     const [allEvents, setAllEvents]= useState([]);
+    const singleService = (id)=>{
+        console.log(id)
+        fetch(`http://localhost:5000/service/${id}`, {
+            method: 'POST',
+            // headers: { "content-type": "application/json" },
+            // body: JSON.stringify({id})
+        })
+        .then(res => res.json())
+          .then(data => console.log(data));
+
+    }
+
     useEffect(()=>{
         fetch("http://localhost:5000/allEvents")
         .then(res => res.json())
         .then(data => setAllEvents(data));
-    },[])
+    },[]);
+    //Book service
+   
     
     return (
         <div>
@@ -32,7 +47,7 @@ const Home = () => {
                 allEvents.slice(1, 10).map(events=><div key= {events._id} className="col-md-4">
                     <h5>{events.title}</h5>
                     <p>{events.description}</p>
-                    <button className="btn btn-warning">Button</button>
+                   <Link to={`/service/${events._id}`}><button onClick={()=>singleService(events._id)}>Book Now</button></Link>
                 </div>)
             }
             </div>

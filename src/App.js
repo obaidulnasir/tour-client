@@ -8,12 +8,12 @@ import Header from "./components/Header/Header";
 import Admin from "./components/Admin/Admin";
 import Register from "./components/Register/Register";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Service from "./components/Service/Service";
 
 
 function App() {
   return (
     <div>
-      
         <BrowserRouter>
           <Header></Header>
           <Switch>
@@ -29,6 +29,10 @@ function App() {
             <PrivateRoute path="/blog">
               <Blog></Blog>
             </PrivateRoute>
+            <PrivateRoute exact path="/service/:id">
+              <Service></Service>
+            </PrivateRoute>
+            <Route path="/service/:id"></Route>
           <Route path="/admin">
             <Admin></Admin>
           </Route>
