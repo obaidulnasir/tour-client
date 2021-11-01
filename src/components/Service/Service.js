@@ -10,7 +10,7 @@ const Service = () => {
     register,
     handleSubmit,
     watch,
-    formState: { errors },
+    formState:{ errors },
   } = useForm();
 
   //on submit
