@@ -28,19 +28,7 @@ const AddEvents = () => {
       <div className="container">
         <h3 className="text-center">Add an Events</h3>
         <div className="w-75 mx-auto">
-          {/* <form onSubmit={handleSubmit(onSubmit)}>
           
-            <input defaultValue="" placeholder="Place Name" {...register("name", {required:true})} />
-              <br />
-            <input {...register("email", { required: true })}  placeholder="Email"/>
-            {errors.exampleRequired && <span>This field is required</span>}
-            <br />
-            <input defaultValue="" {...register("img_link")} placeholder="Image Link"/>
-              <br />
-              <textarea  {...register("description")} placeholder="Description " cols="15" rows="1"></textarea>
-            <br />
-            <input type="submit" value="Add Events"/>
-           </form> */}
            <form onSubmit={handleSubmit(onSubmit)} className="w-100">
             <div class="form-row">
               <div class="form-group col-md-6">
@@ -62,7 +50,7 @@ const AddEvents = () => {
               <textarea  {...register("description")} className="form-control"></textarea>
             </div>
             <button type="submit" class="btn btn-primary mt-2">
-              Sign in
+              Add
             </button>
            </form>
         </div>
