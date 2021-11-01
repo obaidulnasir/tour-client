@@ -9,6 +9,7 @@ import Admin from "./components/Admin/Admin";
 import Register from "./components/Register/Register";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Service from "./components/Service/Service";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -41,7 +42,7 @@ function App() {
             </Route>
           </Switch>
         </BrowserRouter>
-      
+      <Footer></Footer>
     </div>
   );
 }

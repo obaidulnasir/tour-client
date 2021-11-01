@@ -44,13 +44,12 @@ const ManageEvents = () => {
             </tr>
           </thead>
           {events?.map((en, index) => (
-              
             <tbody>
               <tr>
                 <td>{index + 1}</td>
-                <td>{en?.title}</td>
-                <td>{en?.img}</td>
-                <td>{en?.date}</td>
+                <td>{en?.placeName}</td>
+                <td>{en?.img_link}</td>
+                <td>{en?.name}</td>
                 <button
                   onClick={() => {
                     handleDelete(en._id);

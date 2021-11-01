@@ -40,7 +40,7 @@ const MyOrder = () => {
               <th>#</th>
               <th>Name</th>
               <th>Email</th>
-              <th>Address</th>
+              <th>Package</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -50,7 +50,7 @@ const MyOrder = () => {
                 <td>{index+1}</td>
                 <td>{or?.name}</td>
                 <td>{or?.email}</td>
-                <td>{or?.address}</td>
+                <td>{or?.service}</td>
                 <button onClick={()=>{handleDeleteOrder(or._id)}} className="btn bg-danger p-2">Delete</button>
               </tr>
             </tbody>
