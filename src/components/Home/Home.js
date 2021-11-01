@@ -7,7 +7,7 @@ const Home = () => {
     const [allEvents, setAllEvents]= useState([]);
     const singleService = (id)=>{
         console.log(id)
-        fetch(`http://localhost:5000/service/${id}`, {
+        fetch(`https://chilling-beast-37049.herokuapp.com/service/${id}`, {
             method: 'POST',
             // headers: { "content-type": "application/json" },
             // body: JSON.stringify({id})

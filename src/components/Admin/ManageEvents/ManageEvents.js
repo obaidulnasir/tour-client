@@ -14,7 +14,7 @@ const ManageEvents = () => {
   //Delete Events
   const handleDelete = (id) => {
       console.log(id)
-    fetch(`http://localhost:5000/deleteEvent/${id}`, {
+    fetch(`https://chilling-beast-37049.herokuapp.com/deleteEvent/${id}`, {
       method: "DELETE",
       headers: { "content-type": "application/json" },
     })
