@@ -33,9 +33,9 @@ function App() {
               <Service></Service>
             </PrivateRoute>
             <Route path="/service/:id"></Route>
-          <Route path="/admin">
+          <PrivateRoute path="/admin">
             <Admin></Admin>
-          </Route>
+          </PrivateRoute>
             <Route path="/register">
               <Register></Register>
             </Route>

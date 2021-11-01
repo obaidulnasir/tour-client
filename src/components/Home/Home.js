@@ -45,7 +45,7 @@ const Home = () => {
            <div className="container">
             <div className="row">
             {
-                allEvents.slice(1, 10).map(events=><div key= {events._id} className="col-md-4">
+                allEvents.slice(1, 6).map(events=><div key= {events._id} className="col-md-4">
                     <h5>{events.title}</h5>
                     <p>{events.description}</p>
                    <Link to={`/service/${events._id}`}><button onClick={()=>singleService(events._id)}>Book Now</button></Link>
