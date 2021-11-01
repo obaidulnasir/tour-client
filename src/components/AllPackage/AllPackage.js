@@ -29,7 +29,7 @@ const AllPackage = () => {
               <h5>{events.placeName}</h5>
               <p>{events.description.slice(0, 100)}..</p>
               <Link to={`/service/${events._id}`}>
-                <button onClick={() => singleService(events._id)}>
+                <button className="btn btn-info" onClick={() => singleService(events._id)}>
                   Book Now
                 </button>
               </Link>
