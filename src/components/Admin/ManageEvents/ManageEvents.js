@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const ManageEvents = () => {
     const [events, setEvents]= useState([]);
-    fetch("http://localhost:5000/allEvents")
+    fetch("https://chilling-beast-37049.herokuapp.com/allEvents")
     .then(res=> res.json())
     .then(data=> setEvents(data))
     return (

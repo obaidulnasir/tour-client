@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import "./Home.css"
 
 const Home = () => {
+    
     const [allEvents, setAllEvents]= useState([]);
     const singleService = (id)=>{
         console.log(id)
@@ -17,7 +18,7 @@ const Home = () => {
     }
 
     useEffect(()=>{
-        fetch("http://localhost:5000/allEvents")
+        fetch("https://chilling-beast-37049.herokuapp.com/allEvents")
         .then(res => res.json())
         .then(data => setAllEvents(data));
     },[]);

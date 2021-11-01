@@ -9,7 +9,7 @@ const AddEvents = () => {
   } = useForm();
   const onSubmit = (data) => {
       console.log(data);
-      fetch('http://localhost:5000/addEvents', {
+      fetch('https://chilling-beast-37049.herokuapp.com/addEvents', {
           method: 'POST',
           headers: { "content-type": "application/json" },
           body: JSON.stringify(data)
