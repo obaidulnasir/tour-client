@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 const AddEvents = () => {
   const {
     register,
+    reset,
     handleSubmit,
     formState: { errors },
   } = useForm();
@@ -15,10 +16,12 @@ const AddEvents = () => {
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((data) => (
-        alert("events added successfully")
-       
-      ));
+      .then((data) => {
+        if(data.insertedId){
+          alert("add event successfully!")
+          reset()
+        }
+      });
   };
   return (
     <div>
