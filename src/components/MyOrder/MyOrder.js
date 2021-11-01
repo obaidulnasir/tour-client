@@ -5,11 +5,32 @@ import useFirebase from "../../hooks/useFirebase";
 const MyOrder = () => {
   const {user} = useFirebase();
   const [order, setOrder]= useState([]);
+  const [control, setControl] = useState(false);
+
   useEffect(()=>{
     fetch(`http://localhost:5000/myOrder/${user?.email}`)
     .then(res=>res.json())
     .then(data=>setOrder(data));
-  },[user?.email])
+  },[user?.email, order]);
+  
+  // delete order
+  const handleDeleteOrder = (id)=> {
+    console.log(id)
+    fetch(`http://localhost:5000/deleteOrder/${id}`, {
+      method: "DELETE",
+      headers: { "content-type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.deletedCount) {
+          setControl(!control);
+        } else {
+          setControl(false);
+        }
+      });
+    console.log(id);
+  }
+
   return (
     <div>
       <div>
@@ -30,7 +51,7 @@ const MyOrder = () => {
                 <td>{or?.name}</td>
                 <td>{or?.email}</td>
                 <td>{or?.address}</td>
-                <button className="btn bg-danger p-2">Delete</button>
+                <button onClick={()=>{handleDeleteOrder(or._id)}} className="btn bg-danger p-2">Delete</button>
               </tr>
             </tbody>
            ))}

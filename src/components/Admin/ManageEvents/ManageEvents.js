@@ -1,11 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 
 const ManageEvents = () => {
   const [events, setEvents] = useState([]);
-  fetch("https://chilling-beast-37049.herokuapp.com/allEvents")
-    .then((res) => res.json())
-    .then((data) => setEvents(data));
+  const [control, setControl] = useState(false);
+
+  useEffect(() => {
+    fetch("https://chilling-beast-37049.herokuapp.com/allEvents")
+      .then((res) => res.json())
+      .then((data) => setEvents(data));
+  }, [events]);
+
+  //Delete Events
+  const handleDelete = (id) => {
+      console.log(id)
+    fetch(`http://localhost:5000/deleteEvent/${id}`, {
+      method: "DELETE",
+      headers: { "content-type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.deletedCount) {
+          setControl(!control);
+        } else {
+          setControl(false);
+        }
+      });
+    console.log(id);
+  };
   return (
     <div>
       this is manage Events
@@ -22,13 +44,21 @@ const ManageEvents = () => {
             </tr>
           </thead>
           {events?.map((en, index) => (
+              
             <tbody>
               <tr>
-                <td>{index+1}</td>
+                <td>{index + 1}</td>
                 <td>{en?.title}</td>
                 <td>{en?.img}</td>
                 <td>{en?.date}</td>
-                <button className="btn bg-danger p-2">Delete</button>
+                <button
+                  onClick={() => {
+                    handleDelete(en._id);
+                  }}
+                  className="btn bg-danger p-2"
+                >
+                  Delete
+                </button>
               </tr>
             </tbody>
           ))}
