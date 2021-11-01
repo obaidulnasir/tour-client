@@ -83,7 +83,7 @@ const Service = () => {
               <div class="form-group col-md-6">
                   <label for="inputEmail4">Package</label>
                   <input
-                    value={service?.title}
+                    value={service?.placeName}
                     {...register("service")}
                     type="text"
                     class="form-control"
@@ -115,6 +115,8 @@ const Service = () => {
           <div className="col-md-6">
           
             <h3>{service.placeName}</h3>
+            <img className="img-fluid mt-2" width="350px" src={service.img_link} alt="trip-img" />
+            <p className="mt-2">{service.description}</p>
           </div>
         </div>
       </div>

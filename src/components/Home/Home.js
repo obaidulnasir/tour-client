@@ -44,16 +44,13 @@ const Home = () => {
       <div className="container">
         <div className="row my-5">
           <div className="col w-50 mx-auto text-center">
-            <h3 className="fw-bold">Popular Destination</h3>
-            <p className="w-50 mx-auto">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.{" "}
-            </p>
+            <h3 className="fw-bold">Packages in Popular Destinations</h3>
           </div>
         </div>
       </div>
       <div className="container">
         <div className="row text-center">
-          {allEvents.map((events) => (
+          {allEvents.slice(0,6).map((events) => (
             <div key={events._id} className="col-md-4 border p-4">
                 <img width="250px" src={events.img_link} alt="" rounded className="img-fluid"/>
               <h5>{events.placeName}</h5>
