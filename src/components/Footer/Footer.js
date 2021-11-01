@@ -8,12 +8,11 @@ const Footer = () => {
           <div className="col-md-4">
             <h4>Travello</h4>
             <p className="fs-6">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Adipisci, cumque!
+            Come explore beaches, old growth forests, tea plantations and swarming cities on a private Bangladesh tour with a friendly local guide.
             </p>
           </div>
           <div className="col-md-4">
-            <ul>
+            {/* <ul>
               <li>
                 <link rel="stylesheet" href="/home" />
                 Home
@@ -26,7 +25,7 @@ const Footer = () => {
                 <link rel="stylesheet" href="/services" />
                 Services
               </li>
-            </ul>
+            </ul> */}
           </div>
           <div className="col-md-4 fs-3">
             <h5>Stay with us</h5>

@@ -65,49 +65,36 @@ const Home = () => {
         </div>
       </div>
       <div className="container my-5">
-        <div className="row my-5">
+        <div className="row py-5">
           <div className="col-md-4">
             <div className="text-center">
               <img
-                className="my-2"
-                width="150px"
+                className="mt-2"
+                width="80px"
                 src="https://img.icons8.com/ios/50/000000/bus.png"
                 alt=""
               />
               <h3 my-1>Comfortable Journey</h3>
               <p className="text-muted">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
-                repellaae?
+              Comfort in their Journey is a guide broken into a three-part series including; A Most Meaningful Life, Peaceful Endings and Through the Rabbit Hole; 
               </p>
             </div>
           </div>
           <div className="col-md-4">
             <div className="text-center">
-              <img
-                className="my-2"
-                width="150px"
-                src="https://img.icons8.com/ios/50/000000/bus.png"
-                alt=""
-              />
-              <h3 my-1>Comfortable Journey</h3>
+            <img className="mt-2"  width="80px" src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/000000/external-world-global-logistics-flatart-icons-outline-flatarticons.png" alt=""/>
+              <h3 my-1>Tour Guid</h3>
               <p className="text-muted">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
-                repellaae?
+              Come explore beaches, old growth forests, tea plantations and swarming cities on a private Bangladesh tour with a friendly local guide.
               </p>
             </div>
           </div>
           <div className="col-md-4">
             <div className="text-center">
-              <img
-                className="my-2"
-                width="150px"
-                src="https://img.icons8.com/ios/50/000000/bus.png"
-                alt=""
-              />
-              <h3 my-1>Comfortable Journey</h3>
+            <img className="mt-2"  width="80px" src="https://img.icons8.com/external-linector-fill-linector/64/000000/external-hotel-hotel-service-linector-fill-linector.png" alt=""/>
+              <h3 my-1>Luxuries Hotel</h3>
               <p className="text-muted">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
-                repellaae?
+             If you desire an all five-star service and experience, staying in a luxury hotel is the perfect way to sample the lifestyle of the rich.
               </p>
             </div>
           </div>
